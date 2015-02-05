@@ -3,6 +3,7 @@
 Stylify is a transform step that will go into your React createClass calls, find a `styles` definition, run it through LESS and replace it with the resulting AST.
 
 **INCOMPLETE**
+**Based on the PR here: [https://github.com/facebook/flux/pull/149](https://github.com/facebook/flux/pull/149)**
 
 It gets to the point it dumps the LESS AST tree object as JSON, but when restoring the structure, the basic objects need to be converted to LESS objects (less.tree.Rule, less.tree.Selector, etc.). Additionally, the AST is huge. Minified, it's about 4x larger than the LESS string. I started working on restoring it this way, but due to that, haven't gone further:
 
@@ -33,7 +34,7 @@ Given a React component of this structure:
 
 ```js
 var TodoApp = React.createClass({
-  styles: Helpers.styles(`
+  styles: `
     html,
     body {
       margin: 0;
@@ -82,7 +83,7 @@ var TodoApp = React.createClass({
       float: left;
       text-align: left;
     }
-  `),
+  `,
 
   getInitialState: function() {
     return getTodoState();
