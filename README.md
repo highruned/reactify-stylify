@@ -22,6 +22,12 @@ getInitialState: function() {
           tree.selectors = this.styles.selectors;
 
           this.styles = tree;
+          
+          // At this point, this.styles calls get to the point where it says
+          // some function is undefined. Because the tree is JSON, it doesn't 
+          // have the proper methods. So, we need to iterate through and set
+          // their prototype.
+          // Or, during the transform step, build the AST using function calls.
         }.bind(this));
     }
     catch (err) {
