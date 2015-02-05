@@ -1,0 +1,42 @@
+{
+  "name": "reactify-stylify",
+  "version": "0.1.0",
+  "description": "Browserify transform for LESS styles in React",
+  "main": "index.js",
+  "dependencies": {
+    "through": "~2.3.4"
+  },
+  "devDependencies": {
+    "es6-module-jstransform": "^0.1.3",
+    "jshint": "^2.5.10",
+    "esprima": "*",
+    "estraverse": "*",
+    "falafel": "*",
+    "jstransform": "*",
+    "less": "1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ericmuyser/reactify-stylify.git"
+  },
+  "homepage": "https://github.com/ericmuyser/reactify-stylify",
+  "keywords": [
+    "react",
+    "browserify",
+    "browserify-transform",
+    "jsx",
+    "js",
+    "plugin",
+    "transform",
+    "reactify",
+    "styles",
+    "css",
+    "less"
+  ],
+  "author": {
+    "name": "Eric Muyser",
+    "email": "eric@muyser.com",
+    "url": "http://ericmuyser.com"
+  },
+  "license": "MIT"
+}
